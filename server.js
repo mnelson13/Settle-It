@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 // =============================================================
 //require(user routes)(app);
 //require(post routes)(app);
-//require(html routes)(app);
+require('./routes/html-routes.js')(app);
 
 // Syncing sequelize models and then starting the Express app
 // =============================================================

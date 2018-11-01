@@ -37,14 +37,12 @@ module.exports = function(sequelize, DataTypes){
         User_A:{
             type: DataTypes.INTEGER,
             allowNull: false,
-            //is the user id
         },
+
         User_B:{
             type: DataTypes.INTEGER,
             allowNull: false,
-            //is user id
         }
     })
-    
     return SettleIts;
 }
