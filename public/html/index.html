@@ -12,19 +12,21 @@
     <script src="../js/logic.js"></script>
 </head>
 <body>
+    <!-- Navbar -->
+    <div class="row">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#modal1" class="signUp modal-trigger">Sign Up</a></li>
+                    <li><a href="#modal2" class="logIn modal-trigger">Log In</a></li>
+                    <li><a href="create.html" class="create">Create a Settle</a></li>
+                    <li><a href="account.html" class="account">My Account</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div class="container">
-            <!-- Navbar -->
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="index.html" class="brand-logo">Logo</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="#modal1" class="signUp modal-trigger">Sign Up</a></li>
-                        <li><a href="#modal2" class="logIn modal-trigger">Log In</a></li>
-                        <li><a href="create.html" class="create">Create a Settle</a></li>
-                        <li><a href="account.html" class="account">My Account</a></li>
-                    </ul>
-                </div>
-            </nav>
 
             <!-- Sign Up Modal -->
             <div id="modal1" class="modal">
@@ -74,6 +76,28 @@
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
                 </div>
             </div>
+
+        <!-- Div to display settles -->
+        <div class="settleDiv">
+            <div class="row">
+                <div class="col s12">
+                    <!-- Dropdown Trigger -->
+                    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="#!">one</a></li>
+                        <li><a href="#!">two</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li><a href="#!">three</a></li>
+                        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
                           
     </div>
 </body>
