@@ -1,6 +1,7 @@
 module.exports = function(sequelize, DataTypes){
 
-    var Settle_Its = sequelize.define("Settle_Its", {
+    var SettleIts = sequelize.define("SettleIts", {
+
         Topic: {
             type: DataTypes.STRING,
             allowNull: false
@@ -22,16 +23,28 @@ module.exports = function(sequelize, DataTypes){
         },
 
         Side_A_Points:{
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 0
         },
 
         Side_B_Points: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 0
+        },
+
+        User_A:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            //is the user id
+        },
+        User_B:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            //is user id
         }
     })
-    return Settle_Its;
+    
+    return SettleIts;
 }

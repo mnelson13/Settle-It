@@ -21,7 +21,6 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mysql2": "^1.6.1",
-    "passport-local-sequelize": "^0.8.0",
     "sequelize": "^4.41.0"
   }
 }
