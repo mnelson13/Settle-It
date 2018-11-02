@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes){
-   var Voters = sequelize.define("Voters",{
+   var Votes = sequelize.define("Votes",{
        //voter ID
        Voter:{
            type: DataTypes.INTEGER,
@@ -22,5 +22,5 @@ module.exports = function(sequelize, DataTypes){
        }
    })
 
-   return Voters;
+   return Votes;
 }
