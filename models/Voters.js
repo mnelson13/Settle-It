@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes){
-   var EachSettle = sequelize.define("EachSettle",{
+   var Voters = sequelize.define("Voters",{
        //voter ID
-       Voters:{
+       Voter:{
            type: DataTypes.INTEGER,
            allowNull: false
        },
@@ -21,5 +21,6 @@ module.exports = function(sequelize, DataTypes){
            allowNull:false
        }
    })
-   return EachSettle;
+
+   return Voters;
 }
