@@ -1,5 +1,7 @@
 // *** Dependencies
 // =============================================================
+require('dotenv').config()
+
 var express = require("express");
 var bodyParser = require("body-parser");
 
@@ -19,12 +21,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
+app.use(require('cookie-parser')());
+app.use(require('morgan')('combined'));
+
 // // Static directory
 // app.use(express.static("public"));
 
 //setup passport 
-const passport = required('./passport-init')(app);
-const PORT = 3000
+const passport = require('./passport/passport-init')(app);
 
 //passport, set up the forbidden route...when authorization fails, all protected routes will take this path//
 app.get('/forbidden', (req,res) => {
@@ -38,8 +42,8 @@ require('./routes/api-routes.js')(app);
 require('./routes/html-routes.js')(app);
 
 //passport routes, protected and public//
-const protectedRoutes = require('.routes/protected-routes');
-const pubRoutes = require('./routes.public-routes');
+const protectedRoutes = require('./passport/routes/protected-routes');
+const pubRoutes = require('./passport/routes/public-routes');
 app.use(pubRoutes);
 app.use(protectedRoutes);
 
