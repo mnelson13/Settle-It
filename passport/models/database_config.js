@@ -8,7 +8,7 @@ DB_PASS='root'
 const sequelize = new Sequelize(DB_DB, DB_USER, DB_PASS, {
   host: '127.0.0.1',
   dialect: 'mysql',//|'sqlite'|'postgres'|'mssql',
-  port: 3306,
+  port: 8889,
   pool: {
     max: 5,
     min: 0,
