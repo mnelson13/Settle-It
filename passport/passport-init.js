@@ -1,11 +1,11 @@
-
-
-
+//this area needs work//
+var passport = require('passport');
+var session = require("express-session");
 
 
 passport.use(require('./authorization/local'))
 
-//===============BOILERPLATE
+//===============BOILERPLATE below from Joes code 
 
 
 passport.serializeUser(serializeUser);
@@ -19,4 +19,6 @@ expressApp.use(passport.initialize());
 expressApp.use(passport.session());
 
 
-//==============END BOILERPLATE
+//==============END BOILERPLATE from Joes code
+
+//this area needs work//

@@ -22,11 +22,26 @@ app.use(bodyParser.json());
 // // Static directory
 // app.use(express.static("public"));
 
+//setup passport 
+const passport = required('./passport-init')(app);
+const PORT = 3000
+
+//passport, set up the forbidden route...when authorization fails, all protected routes will take this path//
+app.get('/forbidden', (req,res) => {
+  res.send(403, 'You are not authorized')
+});
+
 // Routes
 // =============================================================
 //require(user routes)(app);
 //require(post routes)(app);
 require('./routes/html-routes.js')(app);
+
+//passport routes, protected and public//
+const protectedRoutes = require('.routes/protected-routes');
+const pubRoutes = require('./routes.public-routes');
+app.use(pubRoutes);
+app.use(protectedRoutes);
 
 // Syncing sequelize models and then starting the Express app
 // =============================================================
