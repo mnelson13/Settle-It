@@ -23,8 +23,8 @@ app.use(bodyParser.json());
 // app.use(express.static("public"));
 
 //setup passport 
-const passport = required('./passport-init')(app);
-const PORT = 3000
+/*const passport = required('./passport-init')(app);*/
+/*const PORT = 3000*/
 
 //passport, set up the forbidden route...when authorization fails, all protected routes will take this path//
 app.get('/forbidden', (req,res) => {
