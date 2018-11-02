@@ -34,7 +34,7 @@ app.get('/forbidden', (req,res) => {
 // Routes
 // =============================================================
 //require(user routes)(app);
-//require(post routes)(app);
+require('./routes/api-routes.js')(app);
 require('./routes/html-routes.js')(app);
 
 //passport routes, protected and public//
