@@ -15,7 +15,6 @@ module.exports = function(passport) {
 				<input name="username"/>
 				<input name="password"/>
 				<input type="submit">
-
 			</form>
 
 			`);
@@ -61,3 +60,4 @@ module.exports = function(passport) {
 	return router;
 
 }
+
