@@ -3,36 +3,35 @@
     {{!-- Div to display settles --}}
     <div class="row">
         <div class="col s12 settleDiv">
-            <h2>Add your own Settle!</h2>
+            <h2>Let 'em know what you think!</h2>
 
             <div class="row">
                 <form class="col s12">
 
-                    {{!-- Settle Title Textbox --}}
+                    {{!-- Settle Title --}}
                     <div class="row">
-                        <div class="input-field col s6">
-                            <input id="input_text" type="text" data-length="50">
-                            <label for="input_text">What's the issue?</label>
+                        <div class="col s6 responseTitle">
+                            <h4>{{SettleIts.Topic}}</h4>
                         </div>
                     </div>
 
-                    {{!-- Side A Textbox --}}
+                    {{!-- Side A --}}
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <p>{{SettleIts.Side_A}}</p>
+                        </div>
+                    </div>
+
+                    {{!-- Side B Textbox --}}
                     <div class="row">
                         <div class="input-field col s12">
                             <textarea id="textarea2" class="materialize-textarea" data-length="300"></textarea>
                             <label for="textarea2">Tell us your side</label>
                         </div>
                     </div>
-
-                    {{!-- Dropdown to invite a user for Side B --}}
-                    <ul id='dropdown1' class='dropdown-content'>
-                        {{#each Users}}
-                            <li data-id="{{id}}">{{UserName}}</li>
-                        {{/each}}
-                    </ul>
-
+                    
                     {{!-- Submit Button --}}
-                    <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                         <i class="fas fa-chevron-circle-right"></i>
                     </button>
 
