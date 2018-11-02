@@ -73,7 +73,11 @@ $("#newSettle").on("submit",function(event){
   event.preventDefault();
 
   let newSettle = {
-  
+    Topic: $("#topic").val.trim(),
+    Side_A: $("#sideA").val.trim(),
+    //User_A: $("").val.trim(); //need to find a way to pull user A info using passport
+    User_B: $(".userB"),
+
   }
 
 
