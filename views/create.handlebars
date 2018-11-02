@@ -6,26 +6,26 @@
             <h2>Add your own Settle!</h2>
 
             <div class="row">
-                <form class="col s12">
+                <form class="col s12" id="newSettle">
 
                     {{!-- Settle Title Textbox --}}
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="input_text" type="text" data-length="50">
-                            <label for="input_text">What's the issue?</label>
+                            <input id="topic" type="text" data-length="50">
+                            <label for="topic">What's the issue?</label>
                         </div>
                     </div>
 
                     {{!-- Side A Textbox --}}
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="textarea2" class="materialize-textarea" data-length="300"></textarea>
-                            <label for="textarea2">Tell us your side</label>
+                            <textarea id="sideA" class="materialize-textarea" data-length="300"></textarea>
+                            <label for="sideA">Tell us your side</label>
                         </div>
                     </div>
 
                     {{!-- Dropdown to invite a user for Side B --}}
-                    <ul id='dropdown1' class='dropdown-content'>
+                    <ul id='dropdown1' class='dropdown-content userB'>
                         {{#each Users}}
                             <li data-id="{{id}}">{{UserName}}</li>
                         {{/each}}

@@ -6,5 +6,5 @@ $(document).ready(function(){
 
     $('.dropdown-trigger').dropdown();
 
-    $('input#input_text, textarea#textarea2').characterCounter();
+    $('input#topic, textarea#sideA').characterCounter();
   });
