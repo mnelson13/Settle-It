@@ -1,3 +1,4 @@
+
 let passport      = require('passport');
 let session       = require("express-session")({ secret: "ctiosckzhgkyntvitviaw4", resave: false, saveUninitialized: false  });
 
@@ -112,3 +113,4 @@ const deserializeUser = function(savedId, done) {
     })
     
 }
+

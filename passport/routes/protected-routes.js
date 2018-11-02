@@ -1,5 +1,7 @@
 var router = require('express').Router();
+
 var User = require('../../models/Users');
+
 
 //these 2 lines ensure all the routes on this router are protected. 
 router.use(require('./protection'))
