@@ -1,9 +1,11 @@
 //this area needs work//
 var passport = require('passport');
-var session = require("express-session");
+var session       = require("express-session")({ secret: "ctiosckzhgkyntvitviaw4", resave: false, saveUninitialized: false  });
 
+var User = require ('./models/user');
 
-passport.use(require('./authorization/local'))
+module.exports = function(expressApp) {
+    passport.use(require('./authorization/local'))
 
 //===============BOILERPLATE below from Joes code 
 
@@ -21,4 +23,8 @@ expressApp.use(passport.session());
 
 //==============END BOILERPLATE from Joes code
 
-//this area needs work//
+expressApp.use(
+    require(".routes/local-authentication-routes")(passport))
+    )
+return passport;
+}
