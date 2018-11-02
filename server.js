@@ -31,6 +31,7 @@ app.set("view engine", "handlebars");
 //const passport = required('./passport-init')(app);
 //const PORT = 3000
 
+
 //passport, set up the forbidden route...when authorization fails, all protected routes will take this path//
 app.get('/forbidden', (req,res) => {
   res.send(403, 'You are not authorized')
