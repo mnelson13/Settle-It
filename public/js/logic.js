@@ -34,15 +34,29 @@ $(document).ready(function(){
     })
   })
 
+  $(document.body).on("click", ".voteB", function(){
+    let id = $(this).data("settleId");
 
+    $.get("/api/getOne/" + id, function(data){
+      votes = data.Side_B_Points + 1
 
-
-
-
+    }).then(function(){
+      let newVotes = {
+        votes: votes
+      }
+      $.ajax("api/settles/votes/sideB/" + id,{
+        type: "PUT",
+        data: newVotes
+      }).then(function(){
+        console.log("udated id: " + id);
+        location.reload();
+        //code to update votes on DOM, but not reload whole page??
+      })
+    })
+  })
 
 
   //Account Page
-
 
 
 
