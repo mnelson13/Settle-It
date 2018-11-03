@@ -1,17 +1,37 @@
 var path = require('path')
-
+var db = require('../models')
 module.exports = function(app){
 
     app.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/html/index.html"));
+        
+        db.SettleIts.findAll({})
+        .then((result) => {
+
+            var settleitobj = {
+                SettleIts: result
+            }
+            res.render("index", settleitobj);
+        })
     });
 
-    app.get("/createAccount", function(req, res){
-        res.sendFile(path.join(__dirname, "../public/html/create.html"))
+    app.get("/index.html", function(req, res) {
+        
+        db.SettleIts.findAll({})
+        .then((result) => {
+
+            var settleitobj = {
+                SettleIts: result
+            }
+            res.render("index", settleitobj);
+        })
     });
 
-    app.get("/AccountHome", function(req, res){
-        res.sendFile(path.join(__dirname, "../public/html/account.html"))
+    app.get("/create.html", function(req, res){
+        res.render("create")
+    });
+
+    app.get("/Account.html", function(req, res){
+        res.render("account")
     })
 
 }

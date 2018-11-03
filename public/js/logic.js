@@ -19,14 +19,14 @@ $(document).ready(function(){
   let votes;
 
   $(document.body).on("click", ".voteA", function(){
-    let id = $(this).data("settleId");
+    let id = $(this).data("settleid");
 
     $.get("/api/getOne/" + id, function(data){
       votes = data.Side_A_Points + 1
 
     }).then(function(){
       let newVotes = {
-        votes: votes
+        Side_A_Points: votes
       }
       $.ajax("api/settles/votes/sideA/" + id,{
         type: "PUT",
@@ -40,14 +40,14 @@ $(document).ready(function(){
   })
 
   $(document.body).on("click", ".voteB", function(){
-    let id = $(this).data("settleId");
+    let id = $(this).data("settleid");
 
     $.get("/api/getOne/" + id, function(data){
       votes = data.Side_B_Points + 1
 
     }).then(function(){
       let newVotes = {
-        votes: votes
+        Side_B_Points: votes
       }
       $.ajax("api/settles/votes/sideB/" + id,{
         type: "PUT",
@@ -76,17 +76,17 @@ $(document).ready(function(){
 
 $("#newSettle").on("submit",function(event){
   event.preventDefault();
-
+ console.log($("#topic").val())
   let newSettle = {
-    Topic: $("#topic").val.trim(),
-    Side_A: $("#sideA").val.trim(),
+    Topic: $("#topic").val(),
+    Side_A: $("#sideA").val(),
     //User_A: $("").val.trim(); //need to find a way to pull user A info using passport
-    User_B: $(".userB"),
+    // User_B: $(".userB").val(),
 
   }
 
 
-  $.post("/api/settles", newSettle)
+  $.post("/api/Settle", newSettle)
     .then(function(){
       console.log("added a new settle");
       location.reload();

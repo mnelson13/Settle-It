@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes){
 
         Category:{
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
 
         Side_A: {
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes){
 
         Side_B: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
 
         Side_A_Points:{
@@ -36,12 +36,12 @@ module.exports = function(sequelize, DataTypes){
 
         User_A:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
 
         User_B:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         }
     })
     return SettleIts;

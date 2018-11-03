@@ -96,35 +96,46 @@ module.exports = function(app){
     
       app.post("/api/Settle", function(req, res) {
         console.log(req.body);
-        db.Settle.create({
+        db.SettleIts.create({
           Topic: req.body.Topic,
-          Category: req.body.Category,
           Side_A: req.body.Side_A,
-          Side_B: req.body.Side_B,
-          Side_A_Points: req.body.Side_A_Points,
-          Side_B_Points: req.body.Side_B_Points,
-          User_A: req.body.User_A,
-          User_B: req.body.User_B,
+          Side_B: "",
+          Side_A_Points: 0,
+          Side_B_Points: 0,
+          User_A: "",
+          User_B: "",
         })
           .then(function(dbSettle) {
             res.json(dbSettle);
           });
       });
     
-      app.update("api/settles/votes/sideA/" + id, function(req, res){
+      app.put("/api/settles/votes/sideA/:id", function(req, res){
+
           console.log(req.body);
-          db.Voters.update({
-            Side_A_Points: req.body.Side_A_Points++,
+
+          db.SettleIts.update(
+              req.body,
+            {
+            where:{
+                id: req.params.id
+            },
           })
           .then(function(dbSettle) {
             res.json(dbSettle);
           });
       })
 
-      app.update("api/settles/votes/sideB/" + id, function(req, res){
+      app.put("/api/settles/votes/sideB/:id", function(req, res){
+
         console.log(req.body);
-        db.Voters.update({
-          Side_B_Points: req.body.Side_B_Points++,
+
+        db.SettleIts.update(
+            req.body,
+          {
+          where:{
+              id: req.params.id
+          },
         })
         .then(function(dbSettle) {
           res.json(dbSettle);
