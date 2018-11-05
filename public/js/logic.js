@@ -4,11 +4,8 @@ $(document).ready(function(){
     // Materialize jquery for Collapsable
     $('.collapsible').collapsible();
 
-<<<<<<< HEAD
-=======
     $('select').formSelect();
 
->>>>>>> master
     $('input#topic, textarea#sideA').characterCounter();
 
     $('select').formSelect();
