@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 
 
-  //Main Page
+  //Main Page =========================================================
 
   //voting
   let votes;
@@ -61,7 +61,43 @@ $(document).ready(function(){
   })
 
 
-  //Account Page
+  //Sign Up
+  $(document.body).on("click", "#signup", function(){
+    let email = $("#email").val().trim();
+    let password = $("#newPassword").val().trim();
+    let userName = $("#newUsername").val().trim();
+    console.log("Email: " + email);
+    console.log("password: " + password);
+    console.log("username: " + userName)
+
+    let newUser = {
+      email: email,
+      password: password,
+      userName: userName
+    }
+    $.post("/api/Users", newUser)
+      .then(function(){
+        console.log("added a new User");
+      });
+  })
+
+  //Log in
+  $(document.body).on("click", "#login", function(){
+    let userName = $("#username").val().trim();
+    let password = $("#password").val().trim();
+    
+    let login = {
+      username : userName,
+      password: password
+    };
+    $.post("/login", login)
+      .then(function(data){
+        console.log("logged in: " + data);
+      })
+  });
+
+
+  //Account Page ========================================================
 
 
 
@@ -72,27 +108,31 @@ $(document).ready(function(){
 
 
 
-  //Create Page  
+
+  //Create Page =========================================================
 
 $("#newSettle").on("submit",function(event){
   event.preventDefault();
- console.log($("#topic").val())
-  let newSettle = {
-    Topic: $("#topic").val(),
-    Side_A: $("#sideA").val(),
-    //User_A: $("").val.trim(); //need to find a way to pull user A info using passport
-    // User_B: $(".userB").val(),
+  let userid;
 
-  }
-
-
-  $.post("/api/Settle", newSettle)
-    .then(function(){
-      console.log("added a new settle");
-      location.reload();
-    })
-
-})
+  $.get("/testuser", function(data){
+    userid = data.user.id
+  }).then(function(){
+    console.log(userid)
+    let newSettle = {
+      Topic: $("#topic").val(),
+      Side_A: $("#sideA").val(),
+      User_A: userid
+      // User_B: $(".userB").val(),
+    }
+    $.post("/api/Settle", newSettle)
+      .then(function(){
+        console.log("added a new settle");
+        location.reload();
+      }
+    )
+  });
+});
 
 
   
