@@ -14,3 +14,7 @@ nav {
 img {
     height: 3.1em;
 }
+
+body {
+    background-image: url(dust_scratches.png); 
+}
