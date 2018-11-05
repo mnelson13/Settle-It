@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate"
+    "contributors:generate": "all-contributors generate",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
