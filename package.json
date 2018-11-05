@@ -4,8 +4,8 @@
   "description": "Project 2",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "repository": {
     "type": "git",
@@ -35,9 +35,5 @@
   },
   "devDependencies": {
     "all-contributors-cli": "^5.4.1"
-  },
-  "scripts": {
-    "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate"
   }
 }
