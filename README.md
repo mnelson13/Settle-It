@@ -22,6 +22,9 @@ Melissa Nelson
 https://github.com/mnelson13/Settle-It
 
 <!-- Screen shots of the app in action go here -->
+
+
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
