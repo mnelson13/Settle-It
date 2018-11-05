@@ -3,6 +3,7 @@ nav {
     background-color:#C6F1E7;
     -webkit-box-shadow: 0 0 0 0 rgb(255, 255, 255);
     box-shadow: 0 0 0 0;
+    margin-bottom: 4em;
 }
 
 .navOption {
