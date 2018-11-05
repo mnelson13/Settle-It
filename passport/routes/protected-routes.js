@@ -9,8 +9,21 @@ var Op = Sequelize.Op;
 //these 2 lines ensure all the routes on this router are protected. 
 router.use(require('./protection'))
 
-router.route("/create.html")
-    .get( (req,res) => res.render("create"))
+router.get("/create.html",
+    function(req, res) {
+    db.Users.findAll({
+        where: {
+            id: { [Op.ne]: req.user.id},
+        }
+    })
+    .then((result) => {
+
+        var usersobj = {
+            Users: result
+        }
+        res.render("create", usersobj);
+    })
+})
 
 router.get("/account.html",
     function(req, res) {
@@ -20,11 +33,21 @@ router.get("/account.html",
         }
     })
     .then((result) => {
+        let complete = [];
+        let open = [];
 
-        var settleitobj = {
-            SettleIts: result
+        for(i in result){
+            if(result[i].User_B === req.user.id && result[i].Side_B === null){
+                open.push(result[i]);
+            } else {
+                complete.push(result[i]);
+            }
         }
-        res.render("account", settleitobj);
+
+        res.render("account", {
+            SettleIts: complete,
+            Respond: open
+        });
     })
 });
 
