@@ -36,13 +36,13 @@ module.exports = function(sequelize, DataTypes){
 
         User_A:{
             type: DataTypes.INTEGER,
-            allowNull: true
+            allowNull: false
         },
 
         User_B:{
             type: DataTypes.INTEGER,
             allowNull: true
-        }
+        },
     })
     return SettleIts;
 }
