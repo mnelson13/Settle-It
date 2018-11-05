@@ -4,6 +4,11 @@ $(document).ready(function(){
     // Materialize jquery for Collapsable
     $('.collapsible').collapsible();
 
+<<<<<<< HEAD
+=======
+    $('select').formSelect();
+
+>>>>>>> master
     $('input#topic, textarea#sideA').characterCounter();
 
     $('select').formSelect();
@@ -28,7 +33,7 @@ $(document).ready(function(){
       let newVotes = {
         Side_A_Points: votes
       }
-      $.ajax("api/settles/votes/sideA/" + id,{
+      $.ajax("api/settles/" + id,{
         type: "PUT",
         data: newVotes
       }).then(function(){
@@ -49,7 +54,7 @@ $(document).ready(function(){
       let newVotes = {
         Side_B_Points: votes
       }
-      $.ajax("api/settles/votes/sideB/" + id,{
+      $.ajax("api/settles/" + id,{
         type: "PUT",
         data: newVotes
       }).then(function(){
@@ -98,18 +103,39 @@ $(document).ready(function(){
 
 
   //Account Page ========================================================
+  $(document.body).on("submit", ".addSideBForm", function(event){
+    event.preventDefault();
 
+    let settleid = $(this).attr("id");
+    let sideBText = $("#settle" + settleid).val().trim();
+    console.log(settleid);
+    console.log(sideBText);
 
+    let sideB = {
+      Side_B: sideBText
+    }
+ 
+    $.ajax("api/settles/" + settleid, {
+      type: "PUT",
+      data: sideB
+    }).then(function(){
+      console.log("updated id:" + settleid);
+      location.reload();
+    })
 
-
-
-
+ })
 
 
 
 
 
   //Create Page =========================================================
+  let userB;
+  
+  $('#userB').on("change",function(){
+    userB = $("#userB option:selected").attr('data-id');
+    console.log(userB);
+  });
 
 $("#newSettle").on("submit",function(event){
   event.preventDefault();
@@ -122,8 +148,8 @@ $("#newSettle").on("submit",function(event){
     let newSettle = {
       Topic: $("#topic").val(),
       Side_A: $("#sideA").val(),
-      User_A: userid
-      // User_B: $(".userB").val(),
+      User_A: userid,
+      User_B: userB
     }
     $.post("/api/Settle", newSettle)
       .then(function(){
