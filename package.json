@@ -32,5 +32,12 @@
     "passport-local-sequelize": "^0.8.0",
     "request": "^2.88.0",
     "sequelize": "^4.41.0"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "^5.4.1"
+  },
+  "scripts": {
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   }
 }
