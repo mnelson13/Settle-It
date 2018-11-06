@@ -139,6 +139,7 @@ $("#newSettle").on("submit",function(event){
   let userid;
 
   $.get("/testuser", function(data){
+    console.log("THIS IS WHERE THE DATA LIVES =============== " + data);
     userid = data.user.id
   }).then(function(){
     console.log(userid)
