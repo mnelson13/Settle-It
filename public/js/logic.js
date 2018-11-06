@@ -8,10 +8,13 @@ $(document).ready(function(){
 
     $('input#topic, textarea#sideA').characterCounter();
 
-    $('select').formSelect();
-
-
-
+    $.get("/testuser", function(data){
+      if(data.success === "Yes") {
+        $(".signUp").hide();
+        $(".logIn").hide();
+        $(".logOut").show();
+      }
+    });
 
 
   function getCurrentVotesA(id){
@@ -134,7 +137,15 @@ $(document).ready(function(){
     $.post("/login", login)
       .then(function(data){
         console.log("logged in: " + data);
+        location.reload();
       })
+  });
+
+  // Log Out
+  $(document.body).on("click", ".logOut", function(){
+    $.get("/logout", function(data){
+        console.log("Logged out: " + data)
+    });
   });
 
 
@@ -178,6 +189,7 @@ $("#newSettle").on("submit",function(event){
   let userid;
 
   $.get("/testuser", function(data){
+    console.log("THIS IS WHERE THE DATA LIVES =============== " + data);
     userid = data.user.id
   }).then(function(){
     console.log(userid)
@@ -197,8 +209,4 @@ $("#newSettle").on("submit",function(event){
 });
 
 
-  
-
-
 });
-

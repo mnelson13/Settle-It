@@ -6,7 +6,7 @@ var Op = Sequelize.Op;
 module.exports = function(app){
 
     app.get("/", function(req, res) {
-        
+
         db.SettleIts.findAll({
             where: {
                 Side_A: { [Op.ne]: null},
