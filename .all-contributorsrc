@@ -16,7 +16,9 @@
       "profile": "https://www.linkedin.com/in/chaseholladay/",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "ideas",
+        "review"
       ]
     },
     {
@@ -26,7 +28,10 @@
       "profile": "https://github.com/mnelson13",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "ideas",
+        "review",
+        "design"
       ]
     },
     {
@@ -36,7 +41,10 @@
       "profile": "https://github.com/mattypockets",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "ideas",
+        "review",
+        "design"
       ]
     },
     {
@@ -46,7 +54,9 @@
       "profile": "https://github.com/deenobahri12",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "ideas",
+        "review"
       ]
     },
     {
@@ -56,7 +66,10 @@
       "profile": "https://github.com/Yuvashkenazi",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "ideas",
+        "review",
+        "bug"
       ]
     },
     {
@@ -66,7 +79,10 @@
       "profile": "https://github.com/sbd367",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "ideas",
+        "review",
+        "bug"
       ]
     }
   ]

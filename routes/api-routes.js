@@ -91,7 +91,9 @@ module.exports = function(app){
         })
           .then(function(dbUsers) {
             res.json(dbUsers);
-          });
+          }).catch(err => {
+              if (err) throw err
+          })
       });
     
       app.post("/api/Settle", function(req, res) {

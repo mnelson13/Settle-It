@@ -41,9 +41,12 @@ module.exports = function(sequelize, DataTypes){
 
         User_B:{
             type: DataTypes.INTEGER,
-            allowNull: true
-        },
-        
+
+
+            allowNull: false
+        }
+
+
     })
 
     SettleIts.associate = function(models) {
