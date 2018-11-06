@@ -14,9 +14,12 @@ How it Works
 Technology Used
 
 
+
 Contributers
 
-<!-- https://www.npmjs.com/package/all-contributors-cli -->
+<!-- follow the instructions here https://www.npmjs.com/package/all-contributors-cli 
+after intial set up, add people and their icon by using npm run contributers:add -- mnelson doc code
+then run the command npm run contributors:generate-->
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -31,3 +34,10 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+
+
+Links to things we used such as wireframes
+<!-- this stuff neeeds some work -->
+https://balsamiq.cloud/s38sisx/p8329os
+
+<img src="../public/css/Settle-It Models Diagram.png" alt="Diagram"/>
