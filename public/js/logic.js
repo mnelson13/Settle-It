@@ -34,12 +34,12 @@ $(document).ready(function(){
         type: "PUT",
         data: newVotes
       }).then(function(){
-        console.log("udated id: " + id);
-        location.reload();
-        //code to update votes on DOM, but not reload whole page??
+        $.get("/api/getOne/" + id, function(data){
+          $("#sideA" + id).text(data.Side_A_Points)
+        })
       })
     })
-  })
+  });
 
   $(document.body).on("click", ".voteB", function(){
     let id = $(this).data("settleid");
@@ -55,12 +55,12 @@ $(document).ready(function(){
         type: "PUT",
         data: newVotes
       }).then(function(){
-        console.log("udated id: " + id);
-        location.reload();
-        //code to update votes on DOM, but not reload whole page??
+        $.get("/api/getOne/" + id, function(data){
+          $("#sideB" + id).text(data.Side_B_Points)
+        })
       })
     })
-  })
+  });
 
 
   //Sign Up
