@@ -19,3 +19,7 @@ img {
 body {
     background-image: url(dust_scratches.png); 
 }
+
+#userB {
+    padding-left: 0;
+}

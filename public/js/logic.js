@@ -8,11 +8,6 @@ $(document).ready(function(){
 
     $('input#topic, textarea#sideA').characterCounter();
 
-    $('select').formSelect();
-
-
-
-
 
 
   //Main Page =========================================================
@@ -157,9 +152,6 @@ $("#newSettle").on("submit",function(event){
     )
   });
 });
-
-
-  
 
 
 });

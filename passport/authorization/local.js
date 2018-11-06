@@ -15,6 +15,7 @@ const strategy = new Strategy(
   // },
   //{  session: true },
   //Passport will give us the username and password and the "done" function. 
+  
   function(username, password, done) {
 
     //our user is in Sequelize,
