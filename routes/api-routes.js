@@ -127,4 +127,13 @@ module.exports = function(app){
             res.json(dbSettle);
           });
       })
+
+      app.post("/api/settles/votes", function(req,res){
+          db.Voting.create({
+            Settle: req.body.Settle,
+            Voter: req.body.Voter
+          }).then(function(dbSettle){
+              res.json(dbSettle);
+          })
+      })
 }
