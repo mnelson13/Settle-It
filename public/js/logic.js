@@ -8,6 +8,14 @@ $(document).ready(function(){
 
     $('input#topic, textarea#sideA').characterCounter();
 
+    $.get("/testuser", function(data){
+      if(data.success === "Yes") {
+        $(".signUp").hide();
+        $(".logIn").hide();
+        $(".logOut").show();
+      }
+    });
+
 
   function getCurrentVotesA(id){
     $.get("/api/getOne/" + id, function(data){
@@ -129,7 +137,15 @@ $(document).ready(function(){
     $.post("/login", login)
       .then(function(data){
         console.log("logged in: " + data);
+        location.reload();
       })
+  });
+
+  // Log Out
+  $(document.body).on("click", ".logOut", function(){
+    $.get("/logout", function(data){
+        console.log("Logged out: " + data)
+    });
   });
 
 
@@ -194,4 +210,3 @@ $("#newSettle").on("submit",function(event){
 
 
 });
-
