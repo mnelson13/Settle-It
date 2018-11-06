@@ -43,6 +43,11 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.INTEGER,
             allowNull: true
         },
+        
     })
+
+    SettleIts.associate = function(models) {
+        SettleIts.hasMany(models.Voting)
+      };
     return SettleIts;
 }
