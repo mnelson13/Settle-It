@@ -26,5 +26,9 @@ module.exports = function (sequelize, DataTypes) {
         console.log("Password from the Client :", password)
         return (this.Password === password);
     }
+    Users.associate = function(models) {
+        Users.hasMany(models.Voting)
+      };
+
     return Users;
 }
