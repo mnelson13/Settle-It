@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS `settelit`;
-CREATE DATABASE `settelit`;
-USE `settelit`;
+DROP DATABASE IF EXISTS `settleit`;
+CREATE DATABASE `settleit`;
+USE `settleit`;

@@ -85,9 +85,9 @@ module.exports = function(app){
     app.post("/api/Users", function(req, res) {
         console.log(req.body);
         db.Users.create({
-          Email: req.body.Email,
-          password: req.body.password,
-          userName: req.body.userName
+          Email: req.body.email,
+          Password: req.body.password,
+          UserName: req.body.userName
         })
           .then(function(dbUsers) {
             res.json(dbUsers);
@@ -101,18 +101,18 @@ module.exports = function(app){
         db.SettleIts.create({
           Topic: req.body.Topic,
           Side_A: req.body.Side_A,
-          Side_B: "",
+        //   Side_B: "",
           Side_A_Points: 0,
           Side_B_Points: 0,
-          User_A: "",
-          User_B: "",
+          User_A: req.body.User_A,
+          User_B: req.body.User_B,
         })
           .then(function(dbSettle) {
             res.json(dbSettle);
           });
       });
     
-      app.put("/api/settles/votes/sideA/:id", function(req, res){
+      app.put("/api/settles/:id", function(req, res){
 
           console.log(req.body);
 
@@ -127,20 +127,4 @@ module.exports = function(app){
             res.json(dbSettle);
           });
       })
-
-      app.put("/api/settles/votes/sideB/:id", function(req, res){
-
-        console.log(req.body);
-
-        db.SettleIts.update(
-            req.body,
-          {
-          where:{
-              id: req.params.id
-          },
-        })
-        .then(function(dbSettle) {
-          res.json(dbSettle);
-        });
-    })
 }
