@@ -1,6 +1,6 @@
 ## Settle-It!
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
+<!-- [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors) -->
 
 ## Project Description
 
@@ -16,16 +16,34 @@ Sign up with a user name and log in.
 
 Passport authenticates the users request for a username and password. In the code, passport.authenticate() is called and a specific strategy is used. If authentication fails, then the users gets an erros or 401 unauthorized status. If authentification succeeds, then the user is directed to the home page. The username is comparedd to user names in the database.
 
+Once logged in, you can view your account, where you can see your active settles, or any settles that others have sent you to respond to. You can also go to the "Create a Settle" page where you can start a debate and then pick a user to invite to respond with their side.
+
+Settles will only show on the main page for others to vote on once both sides have been added to the debate.
+
+Each user can vote on each settle only once.
+
+![](screenshot.gif)
+
+Starting a settle:
+![](screenshot2.gif)
+Replying to a settle request:
+![](screenshot3.gif)
 
 ## Technology Used
-Passport, MySQL, Handlebars
-balsamiq models, 
-Javascript, CSS, HTML
+HTML, CSS, Materialize, JavaScript, jQuery, Node.js, Express.js, Passport.js, MySQL, Sequelize, Handlebars, balsamiq models.
+
 
 ## Potential improvements to this app and code
 
 Use a single sign-on using an OAuth provider that require token-based credentials to protect access like Facebook, Twitter, or Github.
 
+Display usernames on debates.
+
+Ability to follow debates that you have voted on.
+
+Ability to set a closing date/time on debates so that the results will be locked in at that time and the debate will be settled.
+
+Pie charts to be able to easily visualize results of each debate.
 
 
 <!-- follow the instructions here https://www.npmjs.com/package/all-contributors-cli 
@@ -45,10 +63,10 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- prettier-ignore -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+<!-- This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome! -->
 
 
-Links to things we used such as wireframes and models
+wireframes and models used:
 
 
 <img src="public/css/Settle-It Models Diagram.png" href="https://www.lucidchart.com/invitations/accept/20eca931-1b53-4383-bf72-e04d465b0cb1" alt="Models" />
