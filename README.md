@@ -12,7 +12,7 @@ https://settle-it.herokuapp.com/
 
 ## How It Works
 
-Sign up with a user name and log in. 
+Sign up with a username and log in. 
 
 Passport authenticates the user's request for a username and password. In the code, passport.authenticate() is called and a specific strategy is used. If authentication fails, then the users gets an error or 401 unauthorized status. If authentification succeeds, then the user is directed to the home page. The username is compared to user names in the database.
 
