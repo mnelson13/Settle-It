@@ -4,9 +4,9 @@
 
 ## Project Description
 
-Settle It! is a web application where you post an issue and describe why you support or do not support your issue. Then you invite a user of the app to respond or vote on your issue. Other users can vote for one side that they support. 
+Settle It! allows users to post their side of an argument, invite someone else to post their competing side, and the community then votes on which side is correct. No comments, no endless discussions, put forth your best stance on an issue so that you can finally Settle-It!
 
-## Link to Deploy Settle-It
+## Link to Deployed Site
 
 https://settle-it.herokuapp.com/
 
@@ -14,10 +14,10 @@ https://settle-it.herokuapp.com/
 
 Sign up with a user name and log in. 
 
-Passport authenticates the users request for a username and password. In the code, passport.authenticate() is called and a specific strategy is used. If authentication fails, then the users gets an erros or 401 unauthorized status. If authentification succeeds, then the user is directed to the home page. The username is comparedd to user names in the database.
+Passport authenticates the user's request for a username and password. In the code, passport.authenticate() is called and a specific strategy is used. If authentication fails, then the users gets an error or 401 unauthorized status. If authentification succeeds, then the user is directed to the home page. The username is compared to user names in the database.
 
 
-## Technology Used
+## Technologies Used
 Passport, MySQL, Handlebars
 balsamiq models, 
 Javascript, CSS, HTML
@@ -48,8 +48,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
 
-Links to things we used such as wireframes and models
-
+### Examples of our wireframes and models
 
 <img src="public/css/Settle-It Models Diagram.png" href="https://www.lucidchart.com/invitations/accept/20eca931-1b53-4383-bf72-e04d465b0cb1" alt="Models" />
 
