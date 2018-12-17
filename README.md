@@ -4,17 +4,17 @@
 
 ## Project Description
 
-Settle It! is a web application where you post an issue and describe why you support or do not support your issue. Then you invite a user of the app to respond or vote on your issue. Other users can vote for one side that they support. 
+Settle It! allows users to post their side of an argument, invite someone else to post their competing side, and the community then votes on which side is correct. No comments, no endless discussions, put forth your best stance on an issue so that you can finally Settle-It!
 
-## Link to Deploy Settle-It
+## Link to Deployed Site
 
 https://settle-it.herokuapp.com/
 
 ## How It Works
 
-Sign up with a user name and log in. 
+Sign up with a username and log in. 
 
-Passport authenticates the users request for a username and password. In the code, passport.authenticate() is called and a specific strategy is used. If authentication fails, then the users gets an erros or 401 unauthorized status. If authentification succeeds, then the user is directed to the home page. The username is comparedd to user names in the database.
+Passport authenticates the user's request for a username and password. In the code, passport.authenticate() is called and a specific strategy is used. If authentication fails, then the users gets an error or 401 unauthorized status. If authentification succeeds, then the user is directed to the home page. The username is compared to user names in the database.
 
 Once logged in, you can view your account, where you can see your active settles, or any settles that others have sent you to respond to. You can also go to the "Create a Settle" page where you can start a debate and then pick a user to invite to respond with their side.
 
@@ -28,6 +28,7 @@ Starting a settle:
 ![](screenshot2.gif)
 Replying to a settle request:
 ![](screenshot3.gif)
+
 
 ## Technology Used
 HTML, CSS, Materialize, JavaScript, jQuery, Node.js, Express.js, Passport.js, MySQL, Sequelize, Handlebars, balsamiq models.
@@ -66,14 +67,11 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome! -->
 
 
-wireframes and models used:
+
+### Examples of our wireframes and models
 
 
 <img src="public/css/Settle-It Models Diagram.png" href="https://www.lucidchart.com/invitations/accept/20eca931-1b53-4383-bf72-e04d465b0cb1" alt="Models" />
 
 <img src="public/css/wireframe1.png" href="https://balsamiq.cloud/s38sisx/p8329os" alt="Wireframe Diagram"/>
-
-
-
-
 
